@@ -13,7 +13,7 @@
     "lint": "tslint --project \"./tsconfig.json\"",
     "test": "mocha -r ts-node/register \"test/**/*.ts\" --reporter spec",
     "docs": "typedoc --out docs src",
-    "hg-pages": "rimraf docs && yarn run docs && gh-pages -d docs",
+    "gh-pages": "rimraf docs && yarn run docs && gh-pages -d docs",
     "ci": "yarn run lint && yarn run build",
     "postversion": "git push && git push --tags",
     "prepublishOnly": "yarn run ci",

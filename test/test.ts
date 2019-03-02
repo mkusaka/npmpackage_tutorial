@@ -1,9 +1,13 @@
 import { describe, it } from "mocha";
 import { IsNullOrEmpty } from "../src/index";
-import { assert } from "chai";
+import { expect } from "chai";
 
-describe("test", () => {
-  it("valid", () => {
-    assert.equal(IsNullOrEmpty(""), true);
+describe("IsNullOrEmpty", () => {
+  it("apply \"\" returns true", () => {
+    expect(IsNullOrEmpty("")).to.equal(true);
+  });
+
+  it("apply `some string` returns false", () => {
+    expect(IsNullOrEmpty("some string")).to.equal(false);
   });
 });

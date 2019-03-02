@@ -1,6 +1,6 @@
 type U = string | any[] | null;
 
-export function IsNullOrEmpty<T>(arg?: U): boolean {
+export function IsNullOrEmpty(arg?: U): boolean {
   if (arg === null || arg === undefined) {
     return true;
   }

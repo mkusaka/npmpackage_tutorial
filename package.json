@@ -7,7 +7,7 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "lint": "tslint --project \"./tsconfig.json\"",
-    "test": "mocha --reporter spec"
+    "test": "mocha -r ts-node/register \"test/**/*.ts\" --reporter spec"
   },
   "repository": {
     "type": "git",

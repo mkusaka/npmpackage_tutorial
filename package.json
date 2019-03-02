@@ -14,8 +14,7 @@
     "url": "git+https://github.com/mkusaka/npmpackage_tutorial.git"
   },
   "keywords": [
-    "test",
-    "package"
+    "test package"
   ],
   "author": "mkusaka <hinoshita1992@gmail.com>",
   "license": "MIT",

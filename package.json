@@ -12,7 +12,6 @@
     "build:watch": "tsc --watch",
     "lint": "tslint --project \"./tsconfig.json\"",
     "test": "mocha -r ts-node/register \"test/**/*.ts\" --reporter spec",
-    "cov": "TS_NODE_COMPILER_OPTIONS='{\"target\":\"es6\"}' nyc mocha \"./test/**/*.ts\" --reporter spec",
     "docs": "typedoc --out docs src",
     "hg-pages": "rimraf docs && yarn run docs && gh-pages -d docs"
   },
@@ -39,28 +38,10 @@
     "gh-pages": "^2.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^6.0.2",
-    "nyc": "^13.3.0",
     "prettier": "^1.16.4",
     "ts-node": "^8.0.2",
     "tslint": "^5.13.1",
     "typedoc": "^0.14.2",
     "typescript": "^3.3.3333"
-  },
-  "nyc": {
-    "include": [
-      "lib/**/*.ts"
-    ],
-    "extension": [
-      ".ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "text",
-      "text-summary",
-      "html"
-    ],
-    "sourceMap": true
   }
 }

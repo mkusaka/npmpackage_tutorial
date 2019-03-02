@@ -1,0 +1,10 @@
+dist/
+.gitignore
+test/
+src/
+coverage/
+.travis.yml
+.prettier.config.js
+tsconfig.json
+tslint.json
+yarn-error.log

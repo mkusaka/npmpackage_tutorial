@@ -1,5 +1,5 @@
 import { describe, it } from "mocha";
-import { IsNullOrEmpty, IsNullOrEmptyString, IsNullOrEmptyArray } from "../src/index";
+import { IsNullOrEmpty, IsNullOrEmptyString, IsNullOrEmptyArray, isArray } from "../src/index";
 import { expect } from "chai";
 
 describe("IsNullOrEmpty", () => {
@@ -61,5 +61,43 @@ describe("IsNullOrEmptyArray", () => {
 
   it("apply legth > 0 array returns false", () => {
     expect(IsNullOrEmpty([null])).to.equal(false);
+  });
+});
+
+describe("isArray", () => {
+  it("undefinded is not Array", () => {
+    expect(isArray(undefined)).to.equal(false);
+  });
+
+  it("boolean is not Array", () => {
+    expect(isArray(false)).to.equal(false);
+    expect(isArray(true)).to.equal(false);
+  });
+
+  it("string is not Array", () => {
+    expect(isArray("I am string")).to.equal(false);
+  });
+
+  it("function is not Array", () => {
+    expect(isArray("I am string")).to.equal(false);
+  });
+
+  it("object literal is not Array", () => {
+    expect(isArray({})).to.equal(false);
+  });
+
+  it("empty array literal `is` Array", () => {
+    expect(isArray([])).to.equal(true);
+  });
+
+  it("some elements array literal `is` Array", () => {
+    expect(isArray([1, "string"])).to.equal(true);
+  });
+
+  it("array from Array constructor `is` Array", () => {
+    expect(isArray(new Array(3))).to.equal(true);
+    expect(isArray(new Array(3, 3))).to.equal(true);
+    expect(isArray(new Array("string"))).to.equal(true);
+    expect(isArray(new Array("string", "is"))).to.equal(true);
   });
 });

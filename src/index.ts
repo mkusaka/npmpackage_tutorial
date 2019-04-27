@@ -18,3 +18,8 @@ export function IsNullOrEmptyString(str?: string): boolean {
 export function IsNullOrEmptyArray(arr?: any[]): boolean {
   return arr === undefined || arr.length === 0;
 }
+
+// see https://qiita.com/myzkyy/items/8b1b91e998ef890e868c
+export function isArray(obj?: Object): boolean {
+  return Object.prototype.toString.call(obj) === '[object Array]';
+}

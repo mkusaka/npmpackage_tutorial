@@ -20,6 +20,6 @@ export function IsNullOrEmptyArray(arr?: any[]): boolean {
 }
 
 // see https://qiita.com/myzkyy/items/8b1b91e998ef890e868c
-export function isArray(obj?: Object): boolean {
-  return Object.prototype.toString.call(obj) === '[object Array]';
+export function isArray(obj: any): boolean {
+  return Object.prototype.toString.call(obj) === "[object Array]";
 }

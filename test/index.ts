@@ -48,19 +48,19 @@ describe("IsNullOrEmptyString", () => {
 
 describe("IsNullOrEmptyArray", () => {
   it("apply [] returns false", () => {
-    expect(IsNullOrEmpty([])).to.equal(true);
+    expect(IsNullOrEmptyArray([])).to.equal(true);
   });
 
   it("apply undefinded returns false", () => {
-    expect(IsNullOrEmpty(undefined)).to.equal(true);
+    expect(IsNullOrEmptyArray(undefined)).to.equal(true);
   });
 
   it("apply legth > 0 array returns false", () => {
-    expect(IsNullOrEmpty(["some"])).to.equal(false);
+    expect(IsNullOrEmptyArray(["some"])).to.equal(false);
   });
 
   it("apply legth > 0 array returns false", () => {
-    expect(IsNullOrEmpty([null])).to.equal(false);
+    expect(IsNullOrEmptyArray([null])).to.equal(false);
   });
 });
 

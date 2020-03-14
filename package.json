@@ -1,6 +1,6 @@
 {
   "name": "@mkusaka/npmpackage_tutorial",
-  "version": "0.0.12",
+  "version": "1.0.0",
   "description": "push test",
   "main": "dist/index.js",
   "engines": {

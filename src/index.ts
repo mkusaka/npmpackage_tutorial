@@ -25,5 +25,5 @@ export function isArray(obj: any): boolean {
 }
 
 export function Hi() {
-  return "Hi!Ho!";
+  return "Hi!Ho!Hi!";
 }

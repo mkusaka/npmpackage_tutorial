@@ -23,3 +23,7 @@ export function IsNullOrEmptyArray(arr?: any[]): boolean {
 export function isArray(obj: any): boolean {
   return Object.prototype.toString.call(obj) === "[object Array]";
 }
+
+export function Hi() {
+  return "Hi!"
+}

@@ -16,8 +16,7 @@
     "gh-pages": "rimraf docs && yarn run docs && gh-pages -d docs",
     "ci": "yarn run lint && yarn run build",
     "postversion": "git push && git push --tags",
-    "prepublishOnly": "yarn run ci",
-    "preversion": "yarn run ci"
+    "prepublishOnly": "yarn run ci"
   },
   "repository": {
     "type": "git",
